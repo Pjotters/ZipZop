@@ -1,0 +1,49 @@
+.video-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-player:hover .video-controls {
+    opacity: 1;
+}
+
+.play-pause, .volume-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+}
+
+.video-sidebar {
+    position: absolute;
+    right: 15px;
+    bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-button img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+} 

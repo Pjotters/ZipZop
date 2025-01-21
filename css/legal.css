@@ -1,0 +1,52 @@
+.legal-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.legal-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.legal-container section {
+    margin: 40px 0;
+}
+
+.legal-container h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.legal-container ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.legal-container li {
+    margin-bottom: 10px;
+}
+
+.legal-container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.navbar {
+    background: var(--background-color);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(255,255,255,0.1);
+} 
