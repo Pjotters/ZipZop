@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZipZop - TikTok Alternatief</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/video-player.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="language-selector">
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+            </select>
+        </div>
+        <div class="login-box">
+            <h1>ZipZop</h1>
+            <p data-i18n="login.title"></p>
+            <button id="tiktokLogin" class="login-button">
+                <img src="tiktok-logo.png" alt="TikTok Logo">
+                <span data-i18n="login.button"></span>
+            </button>
+            <p class="disclaimer" data-i18n="login.disclaimer"></p>
+        </div>
+    </div>
+    <script src="js/proxy-client.js"></script>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/VideoFeed.js"></script>
+</body>
+</html>
