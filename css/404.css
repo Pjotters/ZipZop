@@ -1,0 +1,72 @@
+.error-container {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    padding: 2rem;
+}
+
+.error-content {
+    text-align: center;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.error-content h1 {
+    font-size: 8rem;
+    margin: 0;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.sub-message {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--accent-color);
+    color: var(--dark-bg);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.home-button:hover {
+    transform: scale(1.05);
+}
+
+/* Aanpassingen voor de chatbot widget */
+#bp-web-widget-container {
+    transform: scale(0.7);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+#bp-web-widget-container:hover {
+    transform: scale(0.8);
+}
+
+@media (max-width: 768px) {
+    .error-content h1 {
+        font-size: 6rem;
+    }
+    
+    .error-message {
+        font-size: 1.2rem;
+    }
+} 
