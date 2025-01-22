@@ -1,0 +1,84 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+}
+
+.auth-box {
+    background: rgba(255,255,255,0.05);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.social-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1.5rem 0;
+    transition: transform 0.3s;
+}
+
+.social-login-button:hover {
+    transform: translateY(-2px);
+}
+
+.social-login-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.auth-footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.auth-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.login-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-status.error {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff4444;
+}
+
+.login-status.info {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--accent-color);
+}
+
+.social-login-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
