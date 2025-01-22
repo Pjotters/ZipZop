@@ -1,0 +1,104 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #8b2f97 0%, #ff3366 100%);
+    --accent-color: #00e5ff;
+    --text-color: #ffffff;
+    --dark-bg: #1a1a1a;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+.guide-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 80px auto 0;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.guide-nav {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.guide-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guide-nav a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.guide-nav a:hover {
+    background: var(--card-bg);
+    color: var(--accent-color);
+}
+
+.guide-content {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.guide-content section {
+    margin-bottom: 4rem;
+}
+
+.guide-content h1 {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-block {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-block h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.feature-block i {
+    margin-right: 0.5rem;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .guide-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .guide-nav {
+        position: relative;
+        top: 0;
+    }
+} 
