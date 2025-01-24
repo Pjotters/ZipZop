@@ -7,12 +7,12 @@
     <title>ZipZop - Social Media Vrijheid</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-     <script>
-        window.onload = function() {
+    <script>
+        function playAudio() {
             var audio = new Audio('css/Audio/ZipZop/ZipZop.mp3');
             audio.play().catch(function(error) {
-                console.log("Audio autoplay was prevented");
-            }); 
+                console.log("Audio playback failed");
+            });
         }
     </script>
 </head>
@@ -23,14 +23,17 @@
                 <img src="Image/Logo/2.png" alt="ZipZop Logo" height="40">
             </div>
             <div class="nav-links">
+                <button onclick="playAudio()" class="sound-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
                 <a href="#start">Aan de slag</a>
                 <a href="https://pjotters.com">Pjotters</a>
-                  <a href="handleiding.html">Handleiding</a>
+                <a href="handleiding.html">Handleiding</a>
                 <a href="privacy.nl.html">Privacy</a>
                 <a href="terms.nl.html">Voorwaarden</a>
                 <a href="login.nl.html" class="login-btn">Inloggen</a>
-                               <a href="ZipZopAI.html" class="login-btn">ZipZop-AI</a>
-                 <a href="index.en.html" class="login-btn">English</a>
+                <a href="ZipZopAI.html" class="login-btn">ZipZop-AI</a>
+                <a href="index.en.html" class="login-btn">English</a>
             </div>
         </div>
     </nav>
