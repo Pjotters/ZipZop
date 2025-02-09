@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Blok Spel</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87ceeb;
+            margin: 0;
+        }
+
+        #game {
+            display: grid;
+            grid-template-columns: repeat(20, 30px);
+            grid-template-rows: repeat(20, 30px);
+            gap: 1px;
+        }
+
+        .block {
+            width: 30px;
+            height: 30px;
+            background-color: #8B4513;
+            cursor: pointer;
+        }
+
+        .empty {
+            background-color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+
+    <script>
+        const game = document.getElementById('game');
+        const gridSize = 20; // 20x20 blokken
+
+        // Functie om het grid te genereren
+        function createGrid() {
+            for (let i = 0; i < gridSize * gridSize; i++) {
+                const block = document.createElement('div');
+                block.classList.add('block', 'empty');
+                block.addEventListener('click', toggleBlock);
+                game.appendChild(block);
+            }
+        }
+
+        // Functie om een blok te plaatsen of te verwijderen
+        function toggleBlock(e) {
+            const block = e.target;
+            if (block.classList.contains('empty')) {
+                block.classList.remove('empty');
+                block.style.backgroundColor = '#8B4513'; // Blokje kleur
+            } else {
+                block.classList.add('empty');
+                block.style.backgroundColor = '#FFF'; // Achtergrond kleur
+            }
+        }
+
+        // Grid genereren bij het laden van de pagina
+        createGrid();
+    </script>
+</body>
+</html>
