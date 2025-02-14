@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreren | Pjotters-Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">Pjotters</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Inloggen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <form class="login-form" id="registerForm">
+            <h2>Registreren</h2>
+            <div class="form-group">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Wachtwoord</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="subscription">Kies je abonnement</label>
+                <select id="subscription" name="subscription" required>
+                    <option value="basic">Basis (Gratis)</option>
+                    <option value="pro">Pro (€9.99/maand)</option>
+                    <option value="premium">Premium (€19.99/maand)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <button type="submit" class="login-button">Registreren</button>
+            <div class="form-footer">
+                <span>Al een account?</span>
+                <a href="login.html">Inloggen</a>
+            </div>
+        </form>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBCXaYJI9dxwqKD1Qsb_9AOdsnVTPG2uHM",
+            authDomain: "pjotters-company.firebaseapp.com",
+            databaseURL: "https://pjotters-company-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "pjotters-company",
+            storageBucket: "pjotters-company.appspot.com",
+            messagingSenderId: "64413422793",
+            appId: "1:64413422793:web:4025770645944818d6e918"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        window.firebaseApp = app;
+    </script>
+    <script type="module" src="register.js"></script>
+</body>
+</html> 
